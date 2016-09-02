@@ -51,9 +51,6 @@ class offlineMainController: UIViewController {
     var timer:NSTimer!
     //用于跳转的controller参数
     var controller:String!
-    //用于传递参数的用户名和密码
-    var user_name:String!
-    var document_service:DocumentService!
     //开始测试按钮的事件
     @IBAction func start_test(sender: UIButton) {
         //随机产生照片索引
@@ -85,8 +82,10 @@ class offlineMainController: UIViewController {
         self.start_btn.setTitle("请下次完成测试", forState: UIControlState.Normal)
         self.start_btn.enabled=false
         //3.将已经测试的纪录保存起来
-        let fileName="Off report/"+self.user_name+".plist"
-        let filePath=self.document_service.create_plist(fileName)
+        let filePath=self.getplist_path("offline.plist")
+        if !NSFileManager.defaultManager().fileExistsAtPath(filePath){
+            NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
+        }
         (self.recode_array as NSArray).writeToFile(filePath, atomically: true)
         //4.将测试的now_no保存起来
         //5.5秒后跳转到LoginViewController界面
@@ -102,8 +101,10 @@ class offlineMainController: UIViewController {
         }
         //当是最后一次的时候记录结果
         if(self.now_no==self.end_no){
-            let fileName="Off report/"+self.user_name+".plist"
-            let filePath=self.document_service.create_plist(fileName)
+            let filePath=self.getplist_path("offline.plist")
+            if !NSFileManager.defaultManager().fileExistsAtPath(filePath){
+                NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
+            }
             (self.recode_array as NSArray).writeToFile(filePath, atomically: true)
             //隐藏休息按钮
             self.break_btn.hidden=true
@@ -120,17 +121,17 @@ class offlineMainController: UIViewController {
     //页面跳转函数
     @objc private func jump(){
         self.timer.invalidate()
-        if self.controller=="LoginViewController"{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(self.controller) as! LoginViewController
-            self.presentViewController(vc, animated: true, completion: nil)
-        }else{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(self.controller) as! offlineCharController
-            vc.user_name=self.user_name
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        //let mainStoryboard=UIStoryboard(name:"Main",bundle: NSBundle.mainBundle())
-        //let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier(self.controller) as UIViewController
-        //self.presentViewController(vc, animated: true, completion: nil)
+        let mainStoryboard=UIStoryboard(name:"Main",bundle: NSBundle.mainBundle())
+        let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier(self.controller) as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    //得到plist文件的路径
+    private func getplist_path(plist_name:String)->String{
+        let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentPath = documentPaths[0] as NSString
+        let filePath=documentPath.stringByAppendingPathComponent(plist_name)
+        return filePath
     }
     
     //测试开始的初始化
@@ -271,17 +272,9 @@ class offlineMainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载外部类
-        self.document_service=DocumentService()
-        //打印用户信息
-        //print(self.user_name)
-        //print(self.password)
-        //创建Off report文件夹,用于存放测试记录
-        self.document_service.create_dir("Off report")
+        // Do any additional setup after loading the view, typically from a nib.
         //读出plist文件中的值，看是否有未完成的测试
-        let fileName="Off report/"+self.user_name+".plist"
-        //读出plist文件中的值，看是否有未完成的测试
-        let filePath=self.document_service.getplist_path(fileName)
+        let filePath=self.getplist_path("offline.plist")
         //判断该文件是否存在，如果存在读出数据
         if(NSFileManager.defaultManager().fileExistsAtPath(filePath)){
             let temp=NSArray(contentsOfFile: filePath)! as NSArray

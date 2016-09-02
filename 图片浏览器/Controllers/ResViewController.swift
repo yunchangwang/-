@@ -24,10 +24,6 @@ class ResViewController:UIViewController{
     //执行进度条所需的属性
     var timer:NSTimer!
     var remainTime:Int!
-    var user_name:String!
-    //用来区分在线还是脱机
-    var type:String!
-    var document_service:DocumentService!
     
     @IBAction func res_btn2_action(sender: UIButton) {
         //退出到login页面
@@ -46,10 +42,10 @@ class ResViewController:UIViewController{
     
     //判断数据是否保存成功来显示不同的控件
     private func is_recodered(){
+        //if flag=="success"{
         if self.chart_view_service.save_recoder(self.recodelist as NSArray)=="success"{
-            let fileName=self.type+" report/"+self.user_name+".plist"
             //清除recoder.plist文件内容
-            NSArray().writeToFile(self.getplist_path(fileName), atomically: true)
+            NSArray().writeToFile(self.getplist_path("recoder.plist"), atomically: true)
             //显示成功页面
             self.success_view()
         }else{
@@ -89,15 +85,13 @@ class ResViewController:UIViewController{
     }
     
     private func show_plist(_:Void){
-        let fileName1=self.type+" User/"+self.user_name+".plist"
-        let fileName2=self.type+" report/"+self.user_name+".plist"
         //从plist文件中读出用户id
-        let userPath=self.document_service.getplist_path(fileName1)
+        let userPath=self.getplist_path("user.plist")
         let dic=NSDictionary(contentsOfFile: userPath)! as NSDictionary
         self.user_id=["user_id":dic["user_id"] as! String]
         self.recodelist.append(self.user_id)
         //从plist文件中读出数据
-        let filePath=self.document_service.getplist_path(fileName2)
+        let filePath=self.getplist_path("recoder.plist")
         let list=NSArray(contentsOfFile: filePath)! as NSArray
         self.recoder_num=list.count
         for i in 0..<list.count{
@@ -123,7 +117,6 @@ class ResViewController:UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
         //初始化外部类
         self.chart_view_service=ChartViewService()
-        self.document_service=DocumentService()
         //1.加载数据
         self.show_plist()
         //判断数据是否丢失(记录和用户id不能丢)

@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var label_num: UILabel!
     //控件image view
     @IBOutlet weak var imge_view: UIImageView!
-    //对属性进行懒加载，存放的是所需的图片索引
+    //对属性进行懒加载，存放的是所需的图片
     lazy var pic:NSArray = {
         let diaryList:String = NSBundle.mainBundle().pathForResource("pic", ofType:"plist")!
         var pic_temp=NSArray(contentsOfFile: diaryList)! as NSArray
@@ -51,9 +51,6 @@ class MainViewController: UIViewController {
     var timer:NSTimer!
     //用于跳转的controller参数
     var controller:String!
-    //用于传递参数的用户名和密码
-    var user_name:String!
-    var document_service:DocumentService!
     //开始测试按钮的事件
     @IBAction func start_test(sender: UIButton) {
         //随机产生照片索引
@@ -85,8 +82,10 @@ class MainViewController: UIViewController {
         self.start_btn.setTitle("请下次完成测试", forState: UIControlState.Normal)
         self.start_btn.enabled=false
         //3.将已经测试的纪录保存起来
-        let fileName="Line report/"+self.user_name+".plist"
-        let filePath=self.document_service.create_plist(fileName)
+        let filePath=self.getplist_path("recoder.plist")
+        if !NSFileManager.defaultManager().fileExistsAtPath(filePath){
+            NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
+        }
         (self.recode_array as NSArray).writeToFile(filePath, atomically: true)
         //4.将测试的now_no保存起来
         //5.5秒后跳转到LoginViewController界面
@@ -102,8 +101,10 @@ class MainViewController: UIViewController {
         }
         //当是最后一次的时候记录结果
         if(self.now_no==self.end_no){
-            let fileName="Line report/"+self.user_name+".plist"
-            let filePath=self.document_service.create_plist(fileName)
+            let filePath=self.getplist_path("recoder.plist")
+            if !NSFileManager.defaultManager().fileExistsAtPath(filePath){
+                NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
+            }
             (self.recode_array as NSArray).writeToFile(filePath, atomically: true)
             //隐藏休息按钮
             self.break_btn.hidden=true
@@ -120,17 +121,9 @@ class MainViewController: UIViewController {
     //页面跳转函数
     @objc private func jump(){
         self.timer.invalidate()
-        if self.controller=="LoginViewController"{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(self.controller) as! LoginViewController
-            self.presentViewController(vc, animated: true, completion: nil)
-        }else{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(self.controller) as! ChartViewController
-            vc.user_name=self.user_name
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        /*let mainStoryboard=UIStoryboard(name:"Main",bundle: NSBundle.mainBundle())
+        let mainStoryboard=UIStoryboard(name:"Main",bundle: NSBundle.mainBundle())
         let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier(self.controller) as UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)*/
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     //得到plist文件的路径
@@ -279,16 +272,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载外部类
-        self.document_service=DocumentService()
-        //打印用户信息
-        //print(self.user_name)
-        //print(self.password)
-        //创建Off report文件夹,用于存放测试记录
-        self.document_service.create_dir("Line report")
+        // Do any additional setup after loading the view, typically from a nib.
         //读出plist文件中的值，看是否有未完成的测试
-        let fileName="Line report/"+self.user_name+".plist"
-        let filePath=self.document_service.getplist_path(fileName)
+        let filePath=self.getplist_path("recoder.plist")
         //判断该文件是否存在，如果存在读出数据
         if(NSFileManager.defaultManager().fileExistsAtPath(filePath)){
             let temp=NSArray(contentsOfFile: filePath)! as NSArray
@@ -296,7 +282,7 @@ class MainViewController: UIViewController {
                 self.now_no=self.now_no+temp.count
                 //将纪录读出
                 for i in 0..<temp.count{
-                    self.recode_array.append(temp[i] as! NSDictionary)
+                self.recode_array.append(temp[i] as! NSDictionary)
                 }
                 self.label_num.text="您还遗留\(5-temp.count)次测试"
                 self.start_btn.setTitle("请继续上次测试", forState: UIControlState.Normal)

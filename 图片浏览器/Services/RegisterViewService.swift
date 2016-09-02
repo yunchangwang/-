@@ -30,7 +30,7 @@ class RegisterViewService{
         
         let task=session.dataTaskWithRequest(request, completionHandler:{(data,response,error)->Void in
             if error != nil{
-                check_type="resume_error"
+                check_type="网络连接出错"
             }else{
                 let strData=NSString(data: data!, encoding: NSUTF8StringEncoding)
                 print(strData)
@@ -39,10 +39,10 @@ class RegisterViewService{
                     if let json=try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary{
                         check_type=(json["type"] as? String)!
                     }else{
-                        check_type="nojson_error"
+                        check_type="消息发送出错"
                     }
                 }catch{
-                    check_type="parse_error"
+                    check_type="回送消息解析出错"
                 }
             }
             dispatch_semaphore_signal(semaphore)

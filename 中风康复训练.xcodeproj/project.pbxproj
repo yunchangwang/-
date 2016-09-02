@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D1835011CE801FB00D94F35 /* DocumentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1835001CE801FB00D94F35 /* DocumentService.swift */; };
 		1D1E66FA1CC1E2B900427A2A /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E66F91CC1E2B900427A2A /* ChartViewController.swift */; };
 		1D1E67001CC22A2600427A2A /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E66FF1CC22A2600427A2A /* LineChart.swift */; };
 		1D853DB71CC26A3E00058E53 /* LoginViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DB61CC26A3E00058E53 /* LoginViewService.swift */; };
 		1D853DBA1CC26E1900058E53 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DB91CC26E1900058E53 /* UserModel.swift */; };
 		1D853DBC1CC27CF800058E53 /* RegisterViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DBB1CC27CF800058E53 /* RegisterViewService.swift */; };
 		1D853DBE1CC2859400058E53 /* ChartViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DBD1CC2859400058E53 /* ChartViewService.swift */; };
+		1D9380F51CB67CE700317D60 /* recoder.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9380F41CB67CE700317D60 /* recoder.plist */; };
+		1D9C13C91CDB0EFC00D61921 /* offline.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9C13C81CDB0EFC00D61921 /* offline.plist */; };
 		1D9C13CB1CDB0F7600D61921 /* offlineMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C13CA1CDB0F7600D61921 /* offlineMainController.swift */; };
 		1D9C13CD1CDB600D00D61921 /* offlineCharController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C13CC1CDB600D00D61921 /* offlineCharController.swift */; };
 		1DA100081CB49BE50032C1FD /* _____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA100071CB49BE50032C1FD /* _____Tests.swift */; };
@@ -24,6 +25,7 @@
 		1DA1FFF81CB49BE50032C1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF61CB49BE50032C1FD /* Main.storyboard */; };
 		1DA1FFFA1CB49BE50032C1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF91CB49BE50032C1FD /* Assets.xcassets */; };
 		1DA1FFFD1CB49BE50032C1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFFB1CB49BE50032C1FD /* LaunchScreen.storyboard */; };
+		1DDED7D91CC8739C00211F16 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDED7D81CC8739C00211F16 /* user.plist */; };
 		1DE6310D1CC927AF0046164D /* ResViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE6310C1CC927AF0046164D /* ResViewController.swift */; };
 		1DF3430B1CB9FC250019BC3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */; };
 		1DF3430D1CBA08990019BC3F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3430C1CBA08990019BC3F /* RegisterViewController.swift */; };
@@ -47,13 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D1835001CE801FB00D94F35 /* DocumentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentService.swift; sourceTree = "<group>"; };
 		1D1E66F91CC1E2B900427A2A /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ../ChartViewController.swift; sourceTree = "<group>"; };
 		1D1E66FF1CC22A2600427A2A /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = "../../../../../解压文件/swift-linechart-master/linechart/LineChart.swift"; sourceTree = "<group>"; };
 		1D853DB61CC26A3E00058E53 /* LoginViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewService.swift; sourceTree = "<group>"; };
 		1D853DB91CC26E1900058E53 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1D853DBB1CC27CF800058E53 /* RegisterViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewService.swift; sourceTree = "<group>"; };
 		1D853DBD1CC2859400058E53 /* ChartViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewService.swift; sourceTree = "<group>"; };
+		1D9380F41CB67CE700317D60 /* recoder.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recoder.plist; sourceTree = "<group>"; };
+		1D9C13C81CDB0EFC00D61921 /* offline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = offline.plist; sourceTree = "<group>"; };
 		1D9C13CA1CDB0F7600D61921 /* offlineMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offlineMainController.swift; sourceTree = "<group>"; };
 		1D9C13CC1CDB600D00D61921 /* offlineCharController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offlineCharController.swift; sourceTree = "<group>"; };
 		1DA100031CB49BE50032C1FD /* 中风康复训练.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "中风康复训练.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +73,7 @@
 		1DA1FFF91CB49BE50032C1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA1FFFC1CB49BE50032C1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA1FFFE1CB49BE50032C1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DDED7D81CC8739C00211F16 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		1DE6310C1CC927AF0046164D /* ResViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResViewController.swift; sourceTree = "<group>"; };
 		1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		1DF3430C1CBA08990019BC3F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ../RegisterViewController.swift; sourceTree = "<group>"; };
@@ -106,37 +110,8 @@
 				1D853DB61CC26A3E00058E53 /* LoginViewService.swift */,
 				1D853DBB1CC27CF800058E53 /* RegisterViewService.swift */,
 				1D853DBD1CC2859400058E53 /* ChartViewService.swift */,
-				1D1835001CE801FB00D94F35 /* DocumentService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		1D4DAD5F1CE71238000CF83C /* Line report */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Line report";
-			sourceTree = "<group>";
-		};
-		1D4DAD601CE71245000CF83C /* Line User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Line User";
-			sourceTree = "<group>";
-		};
-		1D4DAD611CE7124C000CF83C /* Off report */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Off report";
-			sourceTree = "<group>";
-		};
-		1D4DAD621CE71253000CF83C /* Off User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Off User";
 			sourceTree = "<group>";
 		};
 		1D853DB81CC26DFA00058E53 /* Model */ = {
@@ -183,11 +158,10 @@
 		1DA100221CB4A7310032C1FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D4DAD621CE71253000CF83C /* Off User */,
-				1D4DAD611CE7124C000CF83C /* Off report */,
-				1D4DAD601CE71245000CF83C /* Line User */,
-				1D4DAD5F1CE71238000CF83C /* Line report */,
 				1DA100231CB4A7520032C1FD /* pic.plist */,
+				1D9380F41CB67CE700317D60 /* recoder.plist */,
+				1DDED7D81CC8739C00211F16 /* user.plist */,
+				1D9C13C81CDB0EFC00D61921 /* offline.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,9 +322,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9380F51CB67CE700317D60 /* recoder.plist in Resources */,
+				1DDED7D91CC8739C00211F16 /* user.plist in Resources */,
 				1DA1FFFD1CB49BE50032C1FD /* LaunchScreen.storyboard in Resources */,
 				1DA1FFFA1CB49BE50032C1FD /* Assets.xcassets in Resources */,
 				1DA1FFF81CB49BE50032C1FD /* Main.storyboard in Resources */,
+				1D9C13C91CDB0EFC00D61921 /* offline.plist in Resources */,
 				1DA100241CB4A7520032C1FD /* pic.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +353,6 @@
 				1DA1FFF31CB49BE50032C1FD /* AppDelegate.swift in Sources */,
 				1D853DBA1CC26E1900058E53 /* UserModel.swift in Sources */,
 				1D853DB71CC26A3E00058E53 /* LoginViewService.swift in Sources */,
-				1D1835011CE801FB00D94F35 /* DocumentService.swift in Sources */,
 				1D9C13CB1CDB0F7600D61921 /* offlineMainController.swift in Sources */,
 				1DF3430D1CBA08990019BC3F /* RegisterViewController.swift in Sources */,
 				1D1E67001CC22A2600427A2A /* LineChart.swift in Sources */,

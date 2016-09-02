@@ -16,8 +16,6 @@ class ChartViewController: UIViewController,LineChartDelegate {
     var data2:[CGFloat]=[]
     var xLabels:[String]=[]
     var list:NSArray!
-    var user_name:String!
-    var document_service:DocumentService!
     
     @IBAction func escp(sender: UIButton) {
         self.jump("LoginViewController")
@@ -27,24 +25,13 @@ class ChartViewController: UIViewController,LineChartDelegate {
     }
     
     private func jump(controller:String){
-        if controller=="LoginViewController"{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(controller) as! LoginViewController
-            self.presentViewController(vc, animated: true, completion: nil)
-        }else{
-            let vc=self.storyboard?.instantiateViewControllerWithIdentifier(controller) as! ResViewController
-            vc.user_name=self.user_name
-            vc.type="Line"
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        //let mainStoryboard = UIStoryboard(name:"Main", bundle: NSBundle.mainBundle())
-        //let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier(controller) as UIViewController
-        //self.presentViewController(vc, animated: true, completion: nil)
+        let mainStoryboard = UIStoryboard(name:"Main", bundle: NSBundle.mainBundle())
+        let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier(controller) as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载外部类
-        self.document_service=DocumentService()
         
         var views: [String: AnyObject] = [:]
         
@@ -80,8 +67,7 @@ class ChartViewController: UIViewController,LineChartDelegate {
     
     private func show_plist(_:Void){
         //从plist文件中读出数据
-        let fileName="Line report/"+self.user_name+".plist"
-        let filePath=self.document_service.getplist_path(fileName)
+        let filePath=self.getplist_path("recoder.plist")
         list=NSArray(contentsOfFile: filePath)! as NSArray
         for i in 0..<list.count{
             let dictionary:NSDictionary=list[i] as! NSDictionary

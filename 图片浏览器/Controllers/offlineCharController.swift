@@ -16,9 +16,6 @@ class offlineCharController: UIViewController,LineChartDelegate {
     var data2:[CGFloat]=[]
     var xLabels:[String]=[]
     var list:NSArray!
-    //用于传递参数的用户名和密码
-    var user_name:String!
-    var document_service:DocumentService!
     
     @IBAction func escp(sender: UIButton) {
         self.jump("LoginViewController")
@@ -32,8 +29,6 @@ class offlineCharController: UIViewController,LineChartDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载外部类
-        self.document_service=DocumentService()
         
         var views: [String: AnyObject] = [:]
         
@@ -69,8 +64,7 @@ class offlineCharController: UIViewController,LineChartDelegate {
     
     private func show_plist(_:Void){
         //从plist文件中读出数据
-        let fileName="Off report/"+self.user_name+".plist"
-        let filePath=self.document_service.getplist_path(fileName)
+        let filePath=self.getplist_path("offline.plist")
         list=NSArray(contentsOfFile: filePath)! as NSArray
         for i in 0..<list.count{
             let dictionary:NSDictionary=list[i] as! NSDictionary
@@ -79,6 +73,13 @@ class offlineCharController: UIViewController,LineChartDelegate {
             self.data2.append(CGFloat((dictionary["photo_num"]?.doubleValue)!))
             self.xLabels.append("测试"+String(i+1))
         }
+    }
+    //获得plist文件的路径
+    private func getplist_path(plist_name:String)->String{
+        let documentPaths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentPath = documentPaths[0] as NSString
+        let filePath=documentPath.stringByAppendingPathComponent(plist_name)
+        return filePath
     }
     
     override func didReceiveMemoryWarning() {
