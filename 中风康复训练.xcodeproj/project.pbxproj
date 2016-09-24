@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D1E66FA1CC1E2B900427A2A /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E66F91CC1E2B900427A2A /* ChartViewController.swift */; };
-		1D1E67001CC22A2600427A2A /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E66FF1CC22A2600427A2A /* LineChart.swift */; };
 		1D853DB71CC26A3E00058E53 /* LoginViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DB61CC26A3E00058E53 /* LoginViewService.swift */; };
 		1D853DBA1CC26E1900058E53 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DB91CC26E1900058E53 /* UserModel.swift */; };
 		1D853DBC1CC27CF800058E53 /* RegisterViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D853DBB1CC27CF800058E53 /* RegisterViewService.swift */; };
@@ -25,6 +24,7 @@
 		1DA1FFF81CB49BE50032C1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF61CB49BE50032C1FD /* Main.storyboard */; };
 		1DA1FFFA1CB49BE50032C1FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF91CB49BE50032C1FD /* Assets.xcassets */; };
 		1DA1FFFD1CB49BE50032C1FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFFB1CB49BE50032C1FD /* LaunchScreen.storyboard */; };
+		1DC7DCA41D96A75900E0DCB2 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7DCA31D96A75900E0DCB2 /* LineChart.swift */; };
 		1DDED7D91CC8739C00211F16 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDED7D81CC8739C00211F16 /* user.plist */; };
 		1DE6310D1CC927AF0046164D /* ResViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE6310C1CC927AF0046164D /* ResViewController.swift */; };
 		1DF3430B1CB9FC250019BC3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */; };
@@ -50,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		1D1E66F91CC1E2B900427A2A /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ../ChartViewController.swift; sourceTree = "<group>"; };
-		1D1E66FF1CC22A2600427A2A /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = "../../../../../解压文件/swift-linechart-master/linechart/LineChart.swift"; sourceTree = "<group>"; };
 		1D853DB61CC26A3E00058E53 /* LoginViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewService.swift; sourceTree = "<group>"; };
 		1D853DB91CC26E1900058E53 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1D853DBB1CC27CF800058E53 /* RegisterViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewService.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		1DA1FFF91CB49BE50032C1FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA1FFFC1CB49BE50032C1FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA1FFFE1CB49BE50032C1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC7DCA31D96A75900E0DCB2 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		1DDED7D81CC8739C00211F16 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		1DE6310C1CC927AF0046164D /* ResViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResViewController.swift; sourceTree = "<group>"; };
 		1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 		1D9D3C5D1CC322B000F06AA8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DC7DCA31D96A75900E0DCB2 /* LineChart.swift */,
 				1D1E66F91CC1E2B900427A2A /* ChartViewController.swift */,
-				1D1E66FF1CC22A2600427A2A /* LineChart.swift */,
 				1DA1FFF41CB49BE50032C1FD /* MainViewController.swift */,
 				1DF3430C1CBA08990019BC3F /* RegisterViewController.swift */,
 				1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */,
@@ -352,10 +352,10 @@
 				1D853DBC1CC27CF800058E53 /* RegisterViewService.swift in Sources */,
 				1DA1FFF31CB49BE50032C1FD /* AppDelegate.swift in Sources */,
 				1D853DBA1CC26E1900058E53 /* UserModel.swift in Sources */,
+				1DC7DCA41D96A75900E0DCB2 /* LineChart.swift in Sources */,
 				1D853DB71CC26A3E00058E53 /* LoginViewService.swift in Sources */,
 				1D9C13CB1CDB0F7600D61921 /* offlineMainController.swift in Sources */,
 				1DF3430D1CBA08990019BC3F /* RegisterViewController.swift in Sources */,
-				1D1E67001CC22A2600427A2A /* LineChart.swift in Sources */,
 				1D9C13CD1CDB600D00D61921 /* offlineCharController.swift in Sources */,
 				1D853DBE1CC2859400058E53 /* ChartViewService.swift in Sources */,
 				1DF3430B1CB9FC250019BC3F /* LoginViewController.swift in Sources */,
