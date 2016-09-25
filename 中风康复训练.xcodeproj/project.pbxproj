@@ -15,10 +15,12 @@
 		1D9380F51CB67CE700317D60 /* recoder.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9380F41CB67CE700317D60 /* recoder.plist */; };
 		1D9C13C91CDB0EFC00D61921 /* offline.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9C13C81CDB0EFC00D61921 /* offline.plist */; };
 		1D9C13CB1CDB0F7600D61921 /* offlineMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C13CA1CDB0F7600D61921 /* offlineMainController.swift */; };
-		1D9C13CD1CDB600D00D61921 /* offlineCharController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C13CC1CDB600D00D61921 /* offlineCharController.swift */; };
+		1D9C13CD1CDB600D00D61921 /* offlineChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C13CC1CDB600D00D61921 /* offlineChartController.swift */; };
 		1DA100081CB49BE50032C1FD /* _____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA100071CB49BE50032C1FD /* _____Tests.swift */; };
 		1DA100131CB49BE60032C1FD /* _____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA100121CB49BE60032C1FD /* _____UITests.swift */; };
 		1DA100241CB4A7520032C1FD /* pic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA100231CB4A7520032C1FD /* pic.plist */; };
+		1DA151D91D97D7DC00C2BFBE /* CommonMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA151D81D97D7DC00C2BFBE /* CommonMainViewController.swift */; };
+		1DA151DD1D97E73000C2BFBE /* CommonChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA151DC1D97E73000C2BFBE /* CommonChart.swift */; };
 		1DA1FFF31CB49BE50032C1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF21CB49BE50032C1FD /* AppDelegate.swift */; };
 		1DA1FFF51CB49BE50032C1FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF41CB49BE50032C1FD /* MainViewController.swift */; };
 		1DA1FFF81CB49BE50032C1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1FFF61CB49BE50032C1FD /* Main.storyboard */; };
@@ -57,7 +59,7 @@
 		1D9380F41CB67CE700317D60 /* recoder.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recoder.plist; sourceTree = "<group>"; };
 		1D9C13C81CDB0EFC00D61921 /* offline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = offline.plist; sourceTree = "<group>"; };
 		1D9C13CA1CDB0F7600D61921 /* offlineMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offlineMainController.swift; sourceTree = "<group>"; };
-		1D9C13CC1CDB600D00D61921 /* offlineCharController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offlineCharController.swift; sourceTree = "<group>"; };
+		1D9C13CC1CDB600D00D61921 /* offlineChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offlineChartController.swift; sourceTree = "<group>"; };
 		1DA100031CB49BE50032C1FD /* 中风康复训练.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "中风康复训练.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA100071CB49BE50032C1FD /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____Tests.swift"; sourceTree = "<group>"; };
 		1DA100091CB49BE50032C1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		1DA100121CB49BE60032C1FD /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
 		1DA100141CB49BE60032C1FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA100231CB4A7520032C1FD /* pic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pic.plist; sourceTree = "<group>"; };
+		1DA151D81D97D7DC00C2BFBE /* CommonMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMainViewController.swift; sourceTree = "<group>"; };
+		1DA151DC1D97E73000C2BFBE /* CommonChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonChart.swift; sourceTree = "<group>"; };
 		1DA1FFEF1CB49BE50032C1FD /* 中风康复训练.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中风康复训练.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA1FFF21CB49BE50032C1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA1FFF41CB49BE50032C1FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +136,7 @@
 				1DF3430A1CB9FC250019BC3F /* LoginViewController.swift */,
 				1DE6310C1CC927AF0046164D /* ResViewController.swift */,
 				1D9C13CA1CDB0F7600D61921 /* offlineMainController.swift */,
-				1D9C13CC1CDB600D00D61921 /* offlineCharController.swift */,
+				1D9C13CC1CDB600D00D61921 /* offlineChartController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 		1DA1FFF11CB49BE50032C1FD /* 中风康复训练 */ = {
 			isa = PBXGroup;
 			children = (
+				1DC7DCA51D96A8AF00E0DCB2 /* CommonControllers */,
 				1D1E67011CC22DB900427A2A /* Services */,
 				1DA100221CB4A7310032C1FD /* Supporting Files */,
 				1DA1FFF21CB49BE50032C1FD /* AppDelegate.swift */,
@@ -201,6 +206,15 @@
 			);
 			name = "中风康复训练";
 			path = "图片浏览器";
+			sourceTree = "<group>";
+		};
+		1DC7DCA51D96A8AF00E0DCB2 /* CommonControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DA151D81D97D7DC00C2BFBE /* CommonMainViewController.swift */,
+				1DA151DC1D97E73000C2BFBE /* CommonChart.swift */,
+			);
+			path = CommonControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +370,10 @@
 				1D853DB71CC26A3E00058E53 /* LoginViewService.swift in Sources */,
 				1D9C13CB1CDB0F7600D61921 /* offlineMainController.swift in Sources */,
 				1DF3430D1CBA08990019BC3F /* RegisterViewController.swift in Sources */,
-				1D9C13CD1CDB600D00D61921 /* offlineCharController.swift in Sources */,
+				1D9C13CD1CDB600D00D61921 /* offlineChartController.swift in Sources */,
+				1DA151D91D97D7DC00C2BFBE /* CommonMainViewController.swift in Sources */,
 				1D853DBE1CC2859400058E53 /* ChartViewService.swift in Sources */,
+				1DA151DD1D97E73000C2BFBE /* CommonChart.swift in Sources */,
 				1DF3430B1CB9FC250019BC3F /* LoginViewController.swift in Sources */,
 				1D1E66FA1CC1E2B900427A2A /* ChartViewController.swift in Sources */,
 			);
@@ -493,8 +509,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 1033112577@qq.com (483C6BJCE2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 1033112577@qq.com (483C6BJCE2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "图片浏览器/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -509,8 +525,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 1033112577@qq.com (483C6BJCE2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 1033112577@qq.com (483C6BJCE2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "图片浏览器/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

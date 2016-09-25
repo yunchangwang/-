@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QuartzCore
 
 class ChartViewController: UIViewController,LineChartDelegate {
     var label = UILabel()
